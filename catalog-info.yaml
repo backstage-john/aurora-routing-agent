@@ -28,6 +28,8 @@ kind: API
 metadata:
   name: routing-agent-a2a
   description: Agent2Agent (A2A) surface exposing route-optimization and dispatch skills.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: a2a
   lifecycle: production
