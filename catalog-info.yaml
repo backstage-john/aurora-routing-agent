@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: routing-agent
+  description: AI agent that computes optimal delivery routes and dispatch decisions.
+  annotations:
+    github.com/project-slug: backstage-john/aurora-routing-agent
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - ai-agent
+    - a2a
+    - python
+spec:
+  type: agent
+  lifecycle: production
+  owner: group:default/team-ai-agents
+  system: system:default/fleet-tracking
+  providesApis:
+    - routing-agent-a2a
+  consumesApis:
+    - tracking-api
+    - mcp-gateway
+  dependsOn:
+    - api:default/shipment-events
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: routing-agent-a2a
+  description: Agent2Agent (A2A) surface exposing route-optimization and dispatch skills.
+spec:
+  type: a2a
+  lifecycle: production
+  owner: group:default/team-ai-agents
+  system: system:default/fleet-tracking
+  definition:
+    $text: ./.well-known/agent.json

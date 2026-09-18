@@ -1,0 +1,2 @@
+# Mockup only — a real implementation would use an A2A server SDK, e.g.:
+# a2a-sdk

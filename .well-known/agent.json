@@ -1,0 +1,21 @@
+{
+  "name": "aurora-routing-agent",
+  "description": "Computes optimal delivery routes and dispatch decisions for Aurora Logistics.",
+  "url": "https://routing-agent.mock.aurora-logistics.example/a2a",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": true
+  },
+  "skills": [
+    {
+      "id": "optimize_route",
+      "name": "Optimize route",
+      "description": "Given a set of pending shipments, returns an optimized delivery route."
+    },
+    {
+      "id": "estimate_eta",
+      "name": "Estimate ETA",
+      "description": "Estimates the delivery ETA for a given shipment."
+    }
+  ]
+}

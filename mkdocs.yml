@@ -1,0 +1,5 @@
+site_name: 'aurora-routing-agent'
+nav:
+  - Introduction: index.md
+plugins:
+  - techdocs-core
