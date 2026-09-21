@@ -14,7 +14,7 @@ spec:
   type: agent
   lifecycle: production
   owner: group:default/team-ai-agents
-  system: system:default/fleet-tracking
+  system: system:default/agent-orchestration
   providesApis:
     - routing-agent-a2a
   consumesApis:
@@ -34,6 +34,6 @@ spec:
   type: a2a
   lifecycle: production
   owner: group:default/team-ai-agents
-  system: system:default/fleet-tracking
+  system: system:default/agent-orchestration
   definition:
     $text: ./.well-known/agent.json
